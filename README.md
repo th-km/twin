@@ -2,25 +2,24 @@
 
 Best of both worlds Tailwind with Emotion 🤷‍♂️
 
-
 ## Quick start
 
 1. Install dependencies `npm i twin.macro @emotion/core gatsby-plugin-emotion`
 2. Create a `gatsby-browser.js` file and import tailwind's base styles
-    ```js
-    import "tailwindcss/dist/base.css"
-    ```
+   ```js
+   import "tailwindcss/dist/base.css"
+   ```
 3. Edit your `gatsby-config.js`
    ```js
-     module.exports = {
-      plugins: ["gatsby-plugin-emotion"]
-    }
+   module.exports = {
+     plugins: ["gatsby-plugin-emotion"],
+   }
    ```
 4. Run `gatsby develop`
 
 ## Examples
 
-page/index.js
+pages/index.js
 
 ```js
 import React from "react"
@@ -28,20 +27,18 @@ import tw from "twin.macro"
 
 import Button from "../components/button"
 
-export default () => {
-  return (
-    <main tw="max-w-4xl mx-auto">
-      <div tw="flex items-center justify-center h-screen">
-        <div tw="grid grid-cols-4 gap-4">
-          <Button>Click me</Button>
-          <Button primary>Click me</Button>
-          <Button secondary>Click me</Button>
-          <Button gradient>Click me</Button>
-        </div>
+export default () => (
+  <main tw="max-w-4xl mx-auto">
+    <div tw="flex items-center justify-center h-screen">
+      <div tw="grid grid-cols-4 gap-4">
+        <Button>Click me</Button>
+        <Button primary>Click me</Button>
+        <Button secondary>Click me</Button>
+        <Button gradient>Click me</Button>
       </div>
-    </main>
-  )
-}
+    </div>
+  </main>
+)
 ```
 
 components/button.js
